@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt"
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Dollar Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        #number-display {
+            font-size: 72px;
+            margin-top: 20px;
+        }
+
+        #increment-button {
+            background-color: #C89CDD;
+            padding: 10px 20px;
+            font-size: 24px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>One Dollar Simulator</h1>
+    <p>No ODS (One Dollar Simulator), você consegue apertar um botão mágico para ganhar seus <i>dollars</i>. Você
+        consegue ganhar seus <i>dollars</i> graças ao <i>Premium</i>.</p>
+    <hr>
+    <div id="number-display">0</div>
+    <button id="increment-button" onclick="audio.play();">Ganhar</button>
+    <hr>
+    <details> <summary>Por que ODS?</summary>
+    <p>Esta obra virtual de simular sacar <i>dollares</i> foi produzida sem orgulho em homenagem ao "homem" Thiago
+        Edigar Massuia Texeira, o criador da engraçadisse e do <i>gacha</i>.</p> </details>
+
+    <script>
+        var numberDisplay = document.getElementById('number-display');
+        var incrementButton = document.getElementById('increment-button');
+        var count = 0;
+
+        incrementButton.addEventListener('click', function () {
+            count++;
+            numberDisplay.textContent = count;
+        });
+    </script>
+    <script type="text/javascript">
+        const audio = new Audio();
+        audio.src = "./money.mp3";
+    </script>
+</body>
+
+</html>
